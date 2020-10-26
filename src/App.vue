@@ -1,30 +1,35 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+   <v-app>
+      <the-nav @toggle-nav="toggleDrawer" :drawer="drawer"></the-nav>
+      <v-navigation-drawer v-model="drawer" temporary right app>
+         <v-list>
+            <v-list-item><v-btn text to="/about">About</v-btn></v-list-item>
+            <v-list-item
+               ><v-btn text to="/portfolio">Portfolio</v-btn></v-list-item
+            >
+            <v-list-item><v-btn text to="/contact">Contact</v-btn></v-list-item>
+         </v-list>
+      </v-navigation-drawer>
+      <v-main>
+         <router-view />
+      </v-main>
+   </v-app>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+   import TheNav from "./components/nav/TheNav.vue";
 
-#nav {
-  padding: 30px;
-}
+   export default {
+      components: { TheNav },
+      name: "App",
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+      data: () => ({
+         drawer: false,
+      }),
+      methods: {
+         toggleDrawer() {
+            this.drawer = !this.drawer;
+         },
+      },
+   };
+</script>
