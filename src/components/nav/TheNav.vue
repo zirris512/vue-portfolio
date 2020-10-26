@@ -1,5 +1,11 @@
 <template>
-   <v-app-bar app color="green">
+   <v-app-bar app color="green lighten-5">
+      <v-img
+         src="../../assets/images/cat.png"
+         max-height="24"
+         max-width="24"
+         class="mr-3"
+      ></v-img>
       <v-btn text to="/about">Brent Edwards</v-btn>
       <v-spacer />
       <div v-if="!isMobile">

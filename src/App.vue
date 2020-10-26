@@ -33,3 +33,9 @@
       },
    };
 </script>
+
+<style>
+   #app {
+      background-image: url("./assets/images/green_background.jpg");
+   }
+</style>
