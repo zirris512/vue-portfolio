@@ -1,5 +1,6 @@
 <template>
    <div>
-      <h1>Portfolio Page</h1>
+      <base-container title="Portfolio"></base-container>
    </div>
 </template>
+
