@@ -1,6 +1,6 @@
 <template>
    <div>
-      <v-app-bar collapse floating>
+      <!-- <v-app-bar collapse floating>
          <v-app-bar-nav-icon @click="toggleDrawer" />
       </v-app-bar>
       <v-navigation-drawer v-model="drawerOpen" absolute temporary width="300">
@@ -10,7 +10,7 @@
                <v-btn text>{{ project.title }}</v-btn>
             </v-list-item>
          </v-list>
-      </v-navigation-drawer>
+      </v-navigation-drawer> -->
       <base-container title="Portfolio">
          <v-row class="mx-5">
             <v-col
@@ -18,10 +18,56 @@
                md="4"
                v-for="project in projects"
                :key="project.title"
+               class="mb-4"
             >
-               <v-card>
-                  <v-card-title>{{ project.title }}</v-card-title>
-                  <v-img :src="project.image" />
+               <v-card color="green darken-2" dark>
+                  <v-card-title class="justify-center">{{
+                     project.title
+                  }}</v-card-title>
+                  <v-card-text>
+                     <v-img :src="project.image" />
+                  </v-card-text>
+                  <v-card-actions>
+                     <v-spacer />
+                     <v-tooltip bottom color="purple">
+                        <template #activator="{ on, attrs }">
+                           <v-btn
+                              icon
+                              :href="project.github"
+                              target="_blank"
+                              v-bind="attrs"
+                              v-on="on"
+                              ><v-icon>mdi-github</v-icon></v-btn
+                           >
+                        </template>
+                        <span>{{ project.github }}</span>
+                     </v-tooltip>
+                     <v-tooltip bottom color="purple">
+                        <template #activator="{ on, attrs }">
+                           <v-btn
+                              icon
+                              :href="project.deploy"
+                              target="_blank"
+                              v-bind="attrs"
+                              v-on="on"
+                              ><v-icon>mdi-open-in-new</v-icon></v-btn
+                           >
+                        </template>
+                        <span>{{ project.deploy }}</span>
+                     </v-tooltip>
+                     <v-tooltip bottom color="purple">
+                        <template #activator="{ on, attrs }">
+                           <v-btn
+                              icon
+                              v-bind="attrs"
+                              v-on="on"
+                              :to="'/portfolio/' + project.id"
+                              ><v-icon>mdi-dots-vertical</v-icon></v-btn
+                           >
+                        </template>
+                        <span>More Details...</span>
+                     </v-tooltip>
+                  </v-card-actions>
                </v-card>
             </v-col>
          </v-row>
@@ -35,12 +81,12 @@
    export default {
       data: () => ({
          projects: projects,
-         drawerOpen: false,
+         // drawerOpen: false,
       }),
-      methods: {
-         toggleDrawer() {
-            this.drawerOpen = true;
-         },
-      },
+      // methods: {
+      //    toggleDrawer() {
+      //       this.drawerOpen = true;
+      //    },
+      // },
    };
 </script>
