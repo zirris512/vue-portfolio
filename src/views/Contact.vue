@@ -1,5 +1,5 @@
 <template>
    <div>
-      <h1>Contact Page</h1>
+      <base-container title="Contact"></base-container>
    </div>
 </template>
