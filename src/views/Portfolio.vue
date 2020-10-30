@@ -20,55 +20,7 @@
                :key="project.title"
                class="mb-4"
             >
-               <v-card color="green darken-2" dark>
-                  <v-card-title class="justify-center">{{
-                     project.title
-                  }}</v-card-title>
-                  <v-card-text>
-                     <v-img :src="project.image" />
-                  </v-card-text>
-                  <v-card-actions>
-                     <v-spacer />
-                     <v-tooltip bottom color="purple">
-                        <template #activator="{ on, attrs }">
-                           <v-btn
-                              icon
-                              :href="project.github"
-                              target="_blank"
-                              v-bind="attrs"
-                              v-on="on"
-                              ><v-icon>mdi-github</v-icon></v-btn
-                           >
-                        </template>
-                        <span>{{ project.github }}</span>
-                     </v-tooltip>
-                     <v-tooltip bottom color="purple">
-                        <template #activator="{ on, attrs }">
-                           <v-btn
-                              icon
-                              :href="project.deploy"
-                              target="_blank"
-                              v-bind="attrs"
-                              v-on="on"
-                              ><v-icon>mdi-open-in-new</v-icon></v-btn
-                           >
-                        </template>
-                        <span>{{ project.deploy }}</span>
-                     </v-tooltip>
-                     <v-tooltip bottom color="purple">
-                        <template #activator="{ on, attrs }">
-                           <v-btn
-                              icon
-                              v-bind="attrs"
-                              v-on="on"
-                              :to="'/portfolio/' + project.id"
-                              ><v-icon>mdi-dots-vertical</v-icon></v-btn
-                           >
-                        </template>
-                        <span>More Details...</span>
-                     </v-tooltip>
-                  </v-card-actions>
-               </v-card>
+               <project-cards v-bind="project" />
             </v-col>
          </v-row>
       </base-container>
@@ -77,8 +29,12 @@
 
 <script>
    import projects from "../data/projects";
+   import ProjectCards from "../components/portfolio/ProjectCards.vue";
 
    export default {
+      components: {
+         ProjectCards,
+      },
       data: () => ({
          projects: projects,
          // drawerOpen: false,
