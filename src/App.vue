@@ -20,14 +20,16 @@
       <v-main>
          <router-view />
       </v-main>
+      <the-footer />
    </v-app>
 </template>
 
 <script>
    import TheNav from "./components/nav/TheNav.vue";
+   import TheFooter from "./components/footer/TheFooter.vue";
 
    export default {
-      components: { TheNav },
+      components: { TheNav, TheFooter },
       name: "App",
 
       data: () => ({
