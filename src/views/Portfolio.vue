@@ -1,16 +1,5 @@
 <template>
    <div>
-      <!-- <v-app-bar collapse floating>
-         <v-app-bar-nav-icon @click="toggleDrawer" />
-      </v-app-bar>
-      <v-navigation-drawer v-model="drawerOpen" absolute temporary width="300">
-         <v-list nav>
-            <h3>Projects List</h3>
-            <v-list-item v-for="project in projects" :key="project.title">
-               <v-btn text>{{ project.title }}</v-btn>
-            </v-list-item>
-         </v-list>
-      </v-navigation-drawer> -->
       <base-container title="Portfolio">
          <v-row class="mx-5">
             <v-col
@@ -37,12 +26,6 @@
       },
       data: () => ({
          projects,
-         // drawerOpen: false,
       }),
-      // methods: {
-      //    toggleDrawer() {
-      //       this.drawerOpen = true;
-      //    },
-      // },
    };
 </script>

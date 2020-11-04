@@ -1,7 +1,14 @@
 <template>
    <v-app>
       <the-nav @toggle-nav="toggleDrawer" :drawer="drawer"></the-nav>
-      <v-navigation-drawer v-model="drawer" temporary right app>
+      <v-navigation-drawer
+         v-model="drawer"
+         temporary
+         right
+         app
+         width="180"
+         color="green lighten-5"
+      >
          <v-list>
             <v-list-item><v-btn text to="/about">About</v-btn></v-list-item>
             <v-list-item

@@ -1,14 +1,15 @@
 <template>
    <div>
-      <v-app-bar collapse floating>
-         <v-app-bar-nav-icon @click="toggleDrawer" />
-      </v-app-bar>
+      <v-btn fab bottom right fixed dark @click="toggleDrawer">
+         <v-icon>mdi-view-list</v-icon>
+      </v-btn>
       <v-navigation-drawer
          v-model="drawerOpen"
+         right
          absolute
          dark
          temporary
-         width="300"
+         width="200"
          color="green darken-3"
       >
          <v-list nav>
@@ -22,7 +23,25 @@
       </v-navigation-drawer>
       <base-container :title="selectedProject.title">
          <v-row class="mx-5">
-            <v-col> </v-col>
+            <v-col cols="12">
+               <v-img
+                  class="float-left ma-4 ml-0"
+                  :src="selectedProject.image"
+               />
+               <p>{{ selectedProject.description }}</p>
+            </v-col>
+         </v-row>
+         <v-row class="mx-5">
+            <v-col cols="6">
+               <h3>Technologies Used:</h3>
+               <v-list>
+                  <v-list-item
+                     v-for="tech in selectedProject.technologies"
+                     :key="tech"
+                     >{{ tech }}</v-list-item
+                  >
+               </v-list>
+            </v-col>
          </v-row>
       </base-container>
    </div>
