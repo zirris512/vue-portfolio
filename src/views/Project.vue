@@ -3,9 +3,16 @@
       <v-app-bar collapse floating>
          <v-app-bar-nav-icon @click="toggleDrawer" />
       </v-app-bar>
-      <v-navigation-drawer v-model="drawerOpen" absolute temporary width="300">
+      <v-navigation-drawer
+         v-model="drawerOpen"
+         absolute
+         dark
+         temporary
+         width="300"
+         color="green darken-3"
+      >
          <v-list nav>
-            <h3>Projects List</h3>
+            <h3>Projects</h3>
             <v-list-item v-for="project in projects" :key="project.title">
                <v-btn text :to="`/portfolio/${project.id}`">{{
                   project.title
