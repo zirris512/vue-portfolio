@@ -32,44 +32,25 @@
                <v-divider />
             </v-col>
          </v-row>
-         <v-row class="mx-5">
-            <v-col cols="6">
-               <v-list two-line>
-                  <v-list-item-content
-                     v-for="skill in skillsLeft"
-                     :key="skill.title"
-                  >
-                     <v-list-item-title class="font-weight-medium"
-                        >- {{ skill.title }}</v-list-item-title
-                     >
-                     <v-list-item-subtitle>{{
-                        skill.subtitle
-                     }}</v-list-item-subtitle>
-                  </v-list-item-content>
-               </v-list>
-            </v-col>
-            <v-col cols="6">
-               <v-list two-line>
-                  <v-list-item-content
-                     v-for="skill in skillsRight"
-                     :key="skill.title"
-                  >
-                     <v-list-item-title class="font-weight-medium"
-                        >- {{ skill.title }}</v-list-item-title
-                     >
-                     <v-list-item-subtitle>{{
-                        skill.subtitle
-                     }}</v-list-item-subtitle>
-                  </v-list-item-content>
-               </v-list>
-            </v-col>
-         </v-row>
+         <large-about
+            v-if="!isMobile"
+            :skillsLeft="skillsLeft"
+            :skillsRight="skillsRight"
+         />
+         <small-about v-else :skillsList="fullList" />
       </base-container>
    </div>
 </template>
 
 <script>
+   import SmallAbout from "../components/about/SmallAbout.vue";
+   import LargeAbout from "../components/about/LargeAbout.vue";
+
    export default {
+      components: {
+         SmallAbout,
+         LargeAbout,
+      },
       data: () => ({
          skillsLeft: [
             { title: "Javascript", subtitle: "Vanilla, JQuery" },
@@ -87,5 +68,13 @@
             { title: "GIT", subtitle: "Git Bash, GitHub" },
          ],
       }),
+      computed: {
+         isMobile() {
+            return this.$vuetify.breakpoint.mobile;
+         },
+         fullList() {
+            return this.skillsLeft.concat(this.skillsRight);
+         },
+      },
    };
 </script>
