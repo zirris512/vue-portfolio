@@ -20,6 +20,12 @@ const routes = [
       component: () => import("../views/Portfolio.vue"),
    },
    {
+      path: "/portfolio/:projectId",
+      name: "Project",
+      component: () => import("../views/Project.vue"),
+      props: true,
+   },
+   {
       path: "/contact",
       name: "Contact",
       component: () => import("../views/Contact.vue"),

@@ -36,7 +36,7 @@
          ProjectCards,
       },
       data: () => ({
-         projects: projects,
+         projects,
          // drawerOpen: false,
       }),
       // methods: {
