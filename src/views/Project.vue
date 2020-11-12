@@ -15,9 +15,9 @@
          <v-list nav>
             <h3>Projects</h3>
             <v-list-item v-for="project in projects" :key="project.title">
-               <v-btn text :to="`/portfolio/${project.id}`">{{
-                  project.title
-               }}</v-btn>
+               <v-btn text :to="`/portfolio/${project.id}`">
+                  {{ project.title }}
+               </v-btn>
             </v-list-item>
          </v-list>
       </v-navigation-drawer>
@@ -32,17 +32,18 @@
             </v-col>
          </v-row>
          <v-row class="mx-5">
-            <v-col cols="6">
+            <v-col cols="12" md="6">
                <h3>Technologies Used:</h3>
                <v-list>
                   <v-list-item
                      v-for="tech in selectedProject.technologies"
                      :key="tech"
-                     >{{ tech }}</v-list-item
                   >
+                     {{ tech }}
+                  </v-list-item>
                </v-list>
             </v-col>
-            <v-col cols="6">
+            <v-col cols="12" md="6">
                <h3>Project Links:</h3>
                <v-list>
                   <v-list-item>
@@ -51,8 +52,9 @@
                         :link="selectedProject.github"
                         icon="mdi-github"
                         target="_blank"
-                        >GitHub</base-button
                      >
+                        GitHub
+                     </base-button>
                   </v-list-item>
                   <v-list-item>
                      <base-button
@@ -60,8 +62,9 @@
                         icon="mdi-open-in-new"
                         :link="selectedProject.deploy"
                         target="_blank"
-                        >Deployed Page</base-button
                      >
+                        Deployed Page
+                     </base-button>
                   </v-list-item>
                </v-list>
             </v-col>
