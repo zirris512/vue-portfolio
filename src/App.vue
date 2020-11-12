@@ -18,7 +18,9 @@
          </v-list>
       </v-navigation-drawer>
       <v-main>
-         <router-view />
+         <transition name="route" mode="out-in">
+            <router-view />
+         </transition>
       </v-main>
       <the-footer />
    </v-app>
@@ -46,5 +48,15 @@
 <style>
    #app {
       background-image: url("./assets/images/green_background.jpg");
+   }
+
+   .route-enter-active,
+   .route-leave-active {
+      transition: all 0.5s;
+   }
+   .route-enter,
+   .route-leave-to {
+      opacity: 0;
+      transform: scale(0.8);
    }
 </style>
