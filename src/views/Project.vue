@@ -1,9 +1,18 @@
 <template>
    <div>
-      <v-btn fab bottom right fixed dark @click="toggleDrawer">
+      <v-btn
+         fab
+         bottom
+         right
+         fixed
+         dark
+         @click="toggleDrawer"
+         v-if="!$vuetify.breakpoint.mobile"
+      >
          <v-icon>mdi-view-list</v-icon>
       </v-btn>
       <v-navigation-drawer
+         v-if="!$vuetify.breakpoint.mobile"
          v-model="drawerOpen"
          right
          absolute
