@@ -4,6 +4,12 @@ import eatDaBurgerImg from "../assets/images/Eat_da_Burger.png";
 import trainScheduleImg from "../assets/images/Train_Schedule.png";
 import clickyGameImg from "../assets/images/Clicky_home.png";
 import escapeImg from "../assets/images/escape.png";
+import planAndGoImgLg from "../assets/images/large/plan_and_go_lg.png";
+import epicAdventureImgLg from "../assets/images/large/epic_adventure_lg.png";
+import eatDaBurgerImgLg from "../assets/images/large/eat_da_burger_lg.png";
+import trainScheduleImgLg from "../assets/images/large/train_schedule_lg.png";
+import clickyGameImgLg from "../assets/images/large/clicky_game_lg.png";
+import escapeImgLg from "../assets/images/large/escape_room_lg.png";
 
 export default [
    {
@@ -20,6 +26,7 @@ export default [
          "Leaflet",
       ],
       image: planAndGoImg,
+      largeImg: planAndGoImgLg,
       github: "https://github.com/zirris512/project-1",
       deploy: "https://zirris512.github.io/project-1/",
    },
@@ -39,6 +46,7 @@ export default [
          "Nodejs",
       ],
       image: epicAdventureImg,
+      largeImg: epicAdventureImgLg,
       github: "https://github.com/zirris512/Project2",
       deploy: "https://ku-project2-group3.herokuapp.com/",
    },
@@ -56,6 +64,7 @@ export default [
          "Handlebars",
       ],
       image: eatDaBurgerImg,
+      largeImg: eatDaBurgerImgLg,
       github: "https://github.com/zirris512/burger",
       deploy: "https://burgerappbse.herokuapp.com/",
    },
@@ -73,6 +82,7 @@ export default [
          "Firebase",
       ],
       image: trainScheduleImg,
+      largeImg: trainScheduleImgLg,
       github: "https://github.com/zirris512/Train_Schedule",
       deploy: "https://zirris512.github.io/Train_Schedule/",
    },
@@ -83,6 +93,7 @@ export default [
          "An app where the user tries to click on images that have not been previously clicked to increase their score. The goal is to achieve the highest score possible out of 12.",
       technologies: ["HTML/CSS", "Javascript", "Reactjs", "Bootstrap"],
       image: clickyGameImg,
+      largeImg: clickyGameImgLg,
       github: "https://github.com/zirris512/clicky-game",
       deploy: "https://zirris512.github.io/clicky-game/",
    },
@@ -101,6 +112,7 @@ export default [
          "SCSS",
       ],
       image: escapeImg,
+      largeImg: escapeImgLg,
       github: "https://github.com/zirris512/escaperoom",
       deploy: "https://shipescaperoom.herokuapp.com/",
    },

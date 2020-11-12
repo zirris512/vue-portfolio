@@ -25,8 +25,8 @@
          <v-row class="mx-5">
             <v-col cols="12">
                <v-img
-                  class="float-left ma-4 ml-0"
-                  :src="selectedProject.image"
+                  class="float-center ma-4 ml-0"
+                  :src="selectedProject.largeImg"
                />
                <p>{{ selectedProject.description }}</p>
             </v-col>
