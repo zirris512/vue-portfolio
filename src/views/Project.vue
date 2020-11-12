@@ -42,6 +42,29 @@
                   >
                </v-list>
             </v-col>
+            <v-col cols="6">
+               <h3>Project Links:</h3>
+               <v-list>
+                  <v-list-item>
+                     <base-button
+                        color="black"
+                        :link="selectedProject.github"
+                        icon="mdi-github"
+                        target="_blank"
+                        >GitHub</base-button
+                     >
+                  </v-list-item>
+                  <v-list-item>
+                     <base-button
+                        color="purple"
+                        icon="mdi-open-in-new"
+                        :link="selectedProject.deploy"
+                        target="_blank"
+                        >Deployed Page</base-button
+                     >
+                  </v-list-item>
+               </v-list>
+            </v-col>
          </v-row>
       </base-container>
    </div>

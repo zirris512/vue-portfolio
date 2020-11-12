@@ -14,7 +14,8 @@
                      <base-button
                         icon="mdi-github"
                         color="black"
-                        href="https://github.com/zirris512"
+                        link="https://github.com/zirris512"
+                        target="_blank"
                         >GitHub</base-button
                      >
                   </v-list-item>
@@ -22,7 +23,8 @@
                      <base-button
                         icon="mdi-linkedin"
                         color="blue darken-1"
-                        href="https://www.linkedin.com/in/brentleigh-edwards-0b29a3140/"
+                        link="https://www.linkedin.com/in/brentleigh-edwards-0b29a3140/"
+                        target="_blank"
                      >
                         LinkedIn
                      </base-button>
@@ -31,7 +33,7 @@
                      <base-button
                         icon="mdi-email"
                         color="red"
-                        href="mailto:brentedwards512@gmail.com"
+                        link="mailto:brentedwards512@gmail.com"
                         >Email</base-button
                      >
                   </v-list-item>

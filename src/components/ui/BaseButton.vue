@@ -1,5 +1,5 @@
 <template>
-   <v-btn dark :color="color" :href="link">
+   <v-btn dark :color="color" :href="link" :target="target">
       <v-icon>{{ icon }}</v-icon>
       <slot />
    </v-btn>
@@ -7,6 +7,6 @@
 
 <script>
    export default {
-      props: ["link", "color", "icon"],
+      props: ["link", "color", "icon", "target"],
    };
 </script>
