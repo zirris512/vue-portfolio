@@ -11,21 +11,28 @@
             <v-col cols="12" class="text-center">
                <v-list>
                   <v-list-item>
-                     <v-btn text href="https://github.com/zirris512"
-                        >GitHub</v-btn
+                     <base-button
+                        icon="mdi-github"
+                        color="black"
+                        href="https://github.com/zirris512"
+                        >GitHub</base-button
                      >
                   </v-list-item>
                   <v-list-item>
-                     <v-btn
-                        text
+                     <base-button
+                        icon="mdi-linkedin"
+                        color="blue darken-1"
                         href="https://www.linkedin.com/in/brentleigh-edwards-0b29a3140/"
                      >
                         LinkedIn
-                     </v-btn>
+                     </base-button>
                   </v-list-item>
                   <v-list-item>
-                     <v-btn text href="mailto:brentedwards512@gmail.com"
-                        >Email</v-btn
+                     <base-button
+                        icon="mdi-email"
+                        color="red"
+                        href="mailto:brentedwards512@gmail.com"
+                        >Email</base-button
                      >
                   </v-list-item>
                </v-list>
