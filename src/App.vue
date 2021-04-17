@@ -1,62 +1,26 @@
 <template>
-   <v-app>
-      <the-nav @toggle-nav="toggleDrawer" :drawer="drawer"></the-nav>
-      <v-navigation-drawer
-         v-model="drawer"
-         temporary
-         right
-         app
-         width="180"
-         color="green lighten-5"
-      >
-         <v-list>
-            <v-list-item><v-btn text to="/about">About</v-btn></v-list-item>
-            <v-list-item
-               ><v-btn text to="/portfolio">Portfolio</v-btn></v-list-item
-            >
-            <v-list-item><v-btn text to="/contact">Contact</v-btn></v-list-item>
-         </v-list>
-      </v-navigation-drawer>
-      <v-main>
-         <transition name="route" mode="out-in">
-            <router-view />
-         </transition>
-      </v-main>
-      <the-footer />
-   </v-app>
+    <the-nav />
+    <About />
 </template>
 
-<script>
-   import TheNav from "./components/nav/TheNav.vue";
-   import TheFooter from "./components/footer/TheFooter.vue";
+<script lang="ts">
+    import { defineComponent } from "vue";
+    import About from "./pages/About.vue";
+    import TheNav from "./components/nav/TheNav.vue";
 
-   export default {
-      components: { TheNav, TheFooter },
-      name: "App",
-
-      data: () => ({
-         drawer: false,
-      }),
-      methods: {
-         toggleDrawer() {
-            this.drawer = !this.drawer;
-         },
-      },
-   };
+    export default defineComponent({
+        components: {
+            About,
+            TheNav,
+        },
+        setup() {},
+    });
 </script>
 
 <style>
-   #app {
-      background-image: url("./assets/images/green_background.jpg");
-   }
-
-   .route-enter-active,
-   .route-leave-active {
-      transition: all 0.5s;
-   }
-   .route-enter,
-   .route-leave-to {
-      opacity: 0;
-      transform: scale(0.8);
-   }
+    *,
+    *::after,
+    *::before {
+        box-sizing: border-box;
+    }
 </style>

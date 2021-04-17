@@ -1,38 +1,69 @@
 <template>
-   <v-app-bar app color="green lighten-5">
-      <v-img
-         src="../../assets/images/cat.png"
-         max-height="24"
-         max-width="24"
-         class="mr-3"
-      ></v-img>
-      <v-btn text to="/about">Brent Edwards</v-btn>
-      <v-spacer />
-      <div v-if="!isMobile">
-         <v-btn text to="/about">About</v-btn>
-         <v-btn text to="/portfolio">Portfolio</v-btn>
-         <v-btn text to="/contact">Contact</v-btn>
-      </div>
-      <div v-else>
-         <v-btn @click.stop="toggleDrawer" icon
-            ><v-icon>mdi-dots-vertical</v-icon></v-btn
-         >
-      </div>
-   </v-app-bar>
+    <nav class="h-16">
+        <ul class="flex items-center h-full w-full bg-black text-2xl">
+            <li class="flex-1"><a href="#">Brent Edwards</a></li>
+            <li><a href="#">About</a></li>
+            <li class="relative">
+                <a
+                    tabindex="0"
+                    class="cursor-pointer"
+                    @click="showTitles = !showTitles"
+                >
+                    Portfolio
+                </a>
+                <font-awesome-icon
+                    v-if="!showTitles"
+                    icon="angle-down"
+                    class="text-white"
+                />
+                <font-awesome-icon v-else icon="angle-up" class="text-white" />
+                <ul
+                    class="bg-black absolute w-max mt-3 -left-5 text-lg"
+                    v-show="showTitles"
+                    @mouseleave="showTitles = false"
+                >
+                    <li class="w-full px-4 py-2 text-white">
+                        <a href="#">All</a>
+                    </li>
+                    <li
+                        class="w-full px-4 py-2 text-white"
+                        v-for="project in data"
+                    >
+                        <a href="#">{{ project.title }}</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
 </template>
 
-<script>
-   export default {
-      props: ["drawer"],
-      computed: {
-         isMobile() {
-            return this.$vuetify.breakpoint.mobile;
-         },
-      },
-      methods: {
-         toggleDrawer() {
-            this.$emit("toggle-nav");
-         },
-      },
-   };
+<script lang="ts">
+    import { defineComponent, ref } from "vue";
+    import data from "../../data/projects";
+
+    export default defineComponent({
+        setup() {
+            const showTitles = ref(false);
+
+            return {
+                data,
+                showTitles,
+            };
+        },
+    });
 </script>
+
+<style scoped>
+    a {
+        color: white;
+    }
+
+    a:focus {
+        outline: none;
+    }
+
+    ul li {
+        margin: 0 2%;
+    }
+</style>
