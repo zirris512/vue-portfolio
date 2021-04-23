@@ -1,16 +1,15 @@
 <template>
     <nav class="h-16">
-        <ul class="flex items-center h-full w-full bg-black text-2xl">
+        <ul
+            class="flex items-center h-full w-full bg-black text-2xl select-none"
+        >
             <li class="flex-1"><a href="#">Brent Edwards</a></li>
             <li><a href="#">About</a></li>
-            <li class="relative">
-                <a
-                    tabindex="0"
-                    class="cursor-pointer"
-                    @click="showTitles = !showTitles"
-                >
-                    Portfolio
-                </a>
+            <li
+                class="relative cursor-pointer"
+                @click="showTitles = !showTitles"
+            >
+                <a tabindex="0"> Portfolio </a>
                 <font-awesome-icon
                     v-if="!showTitles"
                     icon="angle-down"
