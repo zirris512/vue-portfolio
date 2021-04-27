@@ -1,5 +1,5 @@
 <template>
-    <nav class="h-16">
+    <nav class="h-16 fixed w-full top-0 left-0">
         <ul
             class="flex items-center h-full w-full bg-black text-2xl select-none"
         >

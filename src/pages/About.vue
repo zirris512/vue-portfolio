@@ -1,5 +1,5 @@
 <template>
-    <div class="mx-32 my-20 border-black">
+    <div class="md:mx-24 mx-4 my-20 border-black">
         <h1 class="text-4xl font-bold">About Me</h1>
         <hr class="my-8" />
         <div class="mb-8">
@@ -23,11 +23,33 @@
                 memorable experiences for users on the web.
             </p>
         </div>
-        <h1 class="text-4xl font-bold">Technologies:</h1>
+        <h1 class="text-4xl font-bold text-left">Skills/Technologies:</h1>
         <hr class="my-8" />
-        <div class="grid grid-cols-2 gap-4">
-            <div></div>
-            <div></div>
+        <div class="flex w-full skills-list flex-col md:flex-row">
+            <div class="flex-1 mx-2">
+                <h2 class="font-semibold text-2xl text-center md:text-left">
+                    Frontend:
+                </h2>
+                <div class="flex flex-wrap py-4 text-center">
+                    <p>- HTML</p>
+                    <p>- CSS</p>
+                    <p>- Javascript</p>
+                    <p>- Vuejs</p>
+                    <p>- Reactjs</p>
+                </div>
+            </div>
+            <div class="flex-1 mx-2">
+                <h2 class="font-semibold text-2xl text-center md:text-left">
+                    Backend:
+                </h2>
+                <div class="flex flex-wrap py-4 text-center">
+                    <p>- MySQL</p>
+                    <p>- MongoDB</p>
+                    <p>- Nodejs</p>
+                    <p>- Express</p>
+                    <p>- Firebase</p>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -39,3 +61,10 @@
         setup() {},
     });
 </script>
+
+<style scoped>
+    .skills-list p {
+        width: 50%;
+        padding: 0.25rem 0;
+    }
+</style>
