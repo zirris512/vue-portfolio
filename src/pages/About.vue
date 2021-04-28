@@ -27,9 +27,7 @@
         <hr class="my-8" />
         <div class="flex w-full skills-list flex-col md:flex-row">
             <div class="flex-1 mx-2">
-                <h2 class="font-semibold text-2xl text-center md:text-left">
-                    Frontend:
-                </h2>
+                <h2 class="font-semibold text-2xl text-center">Frontend:</h2>
                 <div class="flex flex-wrap py-4 text-center">
                     <p>- HTML</p>
                     <p>- CSS</p>
@@ -39,9 +37,7 @@
                 </div>
             </div>
             <div class="flex-1 mx-2">
-                <h2 class="font-semibold text-2xl text-center md:text-left">
-                    Backend:
-                </h2>
+                <h2 class="font-semibold text-2xl text-center">Backend:</h2>
                 <div class="flex flex-wrap py-4 text-center">
                     <p>- MySQL</p>
                     <p>- MongoDB</p>
