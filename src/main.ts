@@ -1,5 +1,6 @@
 import { createApp } from "vue";
 import App from "./App.vue";
+import { router } from "./router/router";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faAngleDown, faAngleUp, faBars } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -9,6 +10,8 @@ import "./index.css";
 library.add(faAngleDown, faAngleUp, faLinkedin, faGithub, faBars);
 
 const app = createApp(App);
+
+app.use(router);
 
 app.component("font-awesome-icon", FontAwesomeIcon);
 

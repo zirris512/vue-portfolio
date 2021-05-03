@@ -1,10 +1,10 @@
 <template>
     <nav class="h-16 fixed w-full top-0 left-0 bg-black px-4">
         <div class="flex items-center h-full w-full text-2xl select-none">
-            <a href="#">Brent Edwards</a>
+            <router-link to="/about">Brent Edwards</router-link>
             <!-- Desktop Navbar -->
             <div v-if="!isSmallScreen" class="ml-auto flex gap-10">
-                <a href="#">About</a>
+                <router-link to="/about">About</router-link>
                 <div
                     class="relative cursor-pointer"
                     ref="dropdown"
@@ -20,6 +20,9 @@
                         class="flex flex-col absolute -left-3 w-max px-3 bg-black"
                         v-if="showTitles"
                     >
+                        <router-link to="/portfolio" class="my-2">
+                            See All
+                        </router-link>
                         <a
                             href="#"
                             class="my-2"
@@ -30,7 +33,7 @@
                         </a>
                     </div>
                 </div>
-                <a href="#">Contact</a>
+                <router-link to="/contact">Contact</router-link>
             </div>
             <!-- Mobile Navbar -->
             <div v-else class="ml-auto" ref="mobileNav">
@@ -41,7 +44,7 @@
                     v-if="mobileNavOpen"
                     class="absolute bg-black left-0 right-0 px-4 mt-3 flex flex-col gap-3"
                 >
-                    <a href="#">About</a>
+                    <router-link to="/about">About</router-link>
                     <div @click="toggleDropdown" ref="mobilePortfolioDropdown">
                         <a>
                             Portfolio<font-awesome-icon
@@ -53,6 +56,7 @@
                             v-if="showTitles"
                             class="px-5 flex flex-col gap-3 mt-2"
                         >
+                            <router-link to="/portfolio">See All</router-link>
                             <a
                                 href="#"
                                 v-for="project in data"
@@ -62,7 +66,7 @@
                             </a>
                         </div>
                     </div>
-                    <a href="#">Contact</a>
+                    <router-link to="/contact">Contact</router-link>
                 </div>
             </div>
         </div>
@@ -77,9 +81,11 @@
         onMounted,
         ref,
     } from "vue";
+    import { RouterLink } from "vue-router";
     import data from "../../data/projects";
 
     export default defineComponent({
+        components: { RouterLink },
         setup() {
             const showTitles = ref(false);
             const dropdown = ref<HTMLDivElement | null>(null);
