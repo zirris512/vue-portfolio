@@ -33,16 +33,16 @@
                 <a href="#">Contact</a>
             </div>
             <!-- Mobile Navbar -->
-            <div v-else class="ml-auto">
+            <div v-else class="ml-auto" ref="mobileNav">
                 <a href="#" @click="toggleMobileDropdown">
                     <font-awesome-icon icon="bars" />
                 </a>
                 <div
-                    v-if="!mobileNavOpen"
+                    v-if="mobileNavOpen"
                     class="absolute bg-black left-0 right-0 px-4 mt-3 flex flex-col gap-3"
                 >
                     <a href="#">About</a>
-                    <div @click="toggleDropdown" ref="mobileDropdown">
+                    <div @click="toggleDropdown" ref="mobilePortfolioDropdown">
                         <a>
                             Portfolio<font-awesome-icon
                                 v-if="!showTitles"
@@ -83,7 +83,8 @@
         setup() {
             const showTitles = ref(false);
             const dropdown = ref<HTMLDivElement | null>(null);
-            const mobileDropdown = ref<HTMLDivElement | null>(null);
+            const mobilePortfolioDropdown = ref<HTMLDivElement | null>(null);
+            const mobileNav = ref<HTMLDivElement | null>(null);
             const windowWidth = ref(window.innerWidth);
             const isSmallScreen = computed(() => windowWidth.value < 768);
             const mobileNavOpen = ref(false);
@@ -99,9 +100,14 @@
             const toggleClose = (event: Event) => {
                 if (
                     !dropdown.value?.contains(event.target as HTMLElement) &&
-                    !mobileDropdown.value?.contains(event.target as HTMLElement)
+                    !mobilePortfolioDropdown.value?.contains(
+                        event.target as HTMLElement
+                    )
                 ) {
                     showTitles.value = false;
+                }
+                if (!mobileNav.value?.contains(event.target as HTMLElement)) {
+                    mobileNavOpen.value = false;
                 }
             };
 
@@ -122,7 +128,8 @@
             return {
                 data,
                 dropdown,
-                mobileDropdown,
+                mobilePortfolioDropdown,
+                mobileNav,
                 showTitles,
                 toggleDropdown,
                 isSmallScreen,
