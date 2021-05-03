@@ -1,21 +1,21 @@
 <template>
     <the-nav />
-    <About />
+    <router-view></router-view>
     <div class="min-h-12"></div>
     <the-footer />
 </template>
 
 <script lang="ts">
     import { defineComponent } from "vue";
-    import About from "./pages/About.vue";
+    import { RouterView } from "vue-router";
     import TheNav from "./components/nav/TheNav.vue";
     import TheFooter from "./components/footer/TheFooter.vue";
 
     export default defineComponent({
         components: {
-            About,
             TheNav,
             TheFooter,
+            RouterView,
         },
     });
 </script>
