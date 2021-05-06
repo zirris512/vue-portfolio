@@ -37,7 +37,7 @@
             </div>
             <!-- Mobile Navbar -->
             <div v-else class="ml-auto" ref="mobileNav">
-                <a href="#" @click="toggleMobileDropdown">
+                <a class="cursor-pointer" @click="toggleMobileDropdown">
                     <font-awesome-icon icon="bars" />
                 </a>
                 <div
