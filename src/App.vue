@@ -1,8 +1,9 @@
 <template>
-    <the-nav />
-    <router-view></router-view>
-    <div class="min-h-12"></div>
-    <the-footer />
+    <div class="flex flex-col h-screen">
+        <the-nav />
+        <router-view></router-view>
+        <the-footer />
+    </div>
 </template>
 
 <script lang="ts">

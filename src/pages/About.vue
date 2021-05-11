@@ -1,5 +1,5 @@
 <template>
-    <div class="md:mx-24 mx-4 my-20">
+    <div class="md:mx-24 mx-4 my-20 flex-1">
         <h1 class="text-4xl font-bold">About Me</h1>
         <hr class="my-8" />
         <div class="mb-8">
