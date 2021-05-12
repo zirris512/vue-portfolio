@@ -23,14 +23,14 @@
                         <router-link to="/portfolio" class="my-2">
                             See All
                         </router-link>
-                        <a
-                            href="#"
+                        <router-link
+                            :to="`/portfolio/${project.id}`"
                             class="my-2"
                             v-for="project in data"
                             :key="project.title"
                         >
                             {{ project.title }}
-                        </a>
+                        </router-link>
                     </div>
                 </div>
                 <router-link to="/contact">Contact</router-link>
@@ -57,13 +57,13 @@
                             class="px-5 flex flex-col gap-3 mt-2"
                         >
                             <router-link to="/portfolio">See All</router-link>
-                            <a
-                                href="#"
+                            <router-link
+                                :to="`/portfolio/${project.id}`"
                                 v-for="project in data"
                                 :key="project.title"
                             >
                                 {{ project.title }}
-                            </a>
+                            </router-link>
                         </div>
                     </div>
                     <router-link to="/contact">Contact</router-link>
