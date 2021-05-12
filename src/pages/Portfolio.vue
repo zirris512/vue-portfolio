@@ -25,7 +25,7 @@
                         <a
                             :href="project.github"
                             target="_blank"
-                            class="text-2xl mx-3"
+                            class="text-2xl px-3 mx-1"
                         >
                             <font-awesome-icon
                                 :icon="['fab', 'github']"
@@ -34,7 +34,7 @@
                         <a
                             :href="project.deploy"
                             target="_blank"
-                            class="text-2xl mx-3"
+                            class="text-2xl px-3 mx-1"
                         >
                             <font-awesome-icon
                                 icon="external-link-alt"
@@ -42,7 +42,7 @@
                         </a>
                         <router-link
                             :to="`/portfolio/${project.id}`"
-                            class="text-2xl mx-3"
+                            class="text-2xl px-3 mx-1"
                         >
                             <font-awesome-icon
                                 icon="ellipsis-v"
