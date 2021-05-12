@@ -8,12 +8,22 @@ import {
     faBars,
     faExternalLinkAlt,
     faEllipsisV,
+    faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import "./index.css";
 
-library.add(faAngleDown, faAngleUp, faLinkedin, faGithub, faBars, faExternalLinkAlt, faEllipsisV);
+library.add(
+    faAngleDown,
+    faAngleUp,
+    faLinkedin,
+    faGithub,
+    faBars,
+    faExternalLinkAlt,
+    faEllipsisV,
+    faEnvelope
+);
 
 const app = createApp(App);
 

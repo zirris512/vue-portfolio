@@ -20,11 +20,3 @@
         },
     });
 </script>
-
-<style>
-    *,
-    *::after,
-    *::before {
-        box-sizing: border-box;
-    }
-</style>
