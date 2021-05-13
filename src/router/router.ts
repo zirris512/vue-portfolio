@@ -13,4 +13,11 @@ export const router = createRouter({
         { path: "/contact", component: Contact },
         { path: "/portfolio/:id", component: SingleProject, props: true },
     ],
+    scrollBehavior(to, from, savedPosition) {
+        if (savedPosition) {
+            return savedPosition;
+        } else {
+            return { top: 0 };
+        }
+    },
 });
