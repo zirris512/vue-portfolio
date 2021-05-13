@@ -1,8 +1,8 @@
 <template>
-    <div class="md:mx-24 mx-4 my-20 flex-1">
+    <div class="md:mx-24 mx-4 my-20 p-5 rounded-xl flex-1 bg-white shadow-md">
         <h1 class="text-4xl font-bold">Contact</h1>
         <hr class="my-8" />
-        <main class="md:mx-20">
+        <main class="md:mx-20 mt-20">
             <div class="mb-16">
                 <h3 class="text-xl">
                     I am seeking employment in web development with agencies
@@ -14,7 +14,7 @@
                 </h3>
             </div>
             <div
-                class="flex flex-col gap-4 md:flex-row md:items-center md:justify-center mt-auto"
+                class="flex flex-col gap-4 md:flex-row md:items-center md:justify-center"
             >
                 <a
                     class="border-red-600 border-2 rounded-md px-3 py-2 text-red-600 hover:bg-red-100 text-xl text-center w-32"

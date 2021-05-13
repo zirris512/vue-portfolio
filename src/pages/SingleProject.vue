@@ -1,7 +1,11 @@
 <template>
-    <div class="md:mx-24 mx-4 my-20 flex-1">
+    <div class="md:mx-24 mx-4 my-20 p-5 rounded-xl flex-1 bg-white shadow-md">
         <section class="my-8">
-            <img :src="values.largeImg" alt="" />
+            <img
+                :src="values.largeImg"
+                :alt="values.id"
+                class="w-4/5 h-4/5 mx-auto"
+            />
         </section>
         <main>
             <h2 class="text-2xl font-bold mb-4">{{ values.title }}</h2>

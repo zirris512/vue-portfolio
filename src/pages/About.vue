@@ -1,29 +1,34 @@
 <template>
-    <div class="md:mx-24 mx-4 my-20 flex-1">
+    <div class="md:mx-24 mx-4 my-20 p-5 rounded-xl flex-1 bg-white shadow-md">
         <h1 class="text-4xl font-bold">About Me</h1>
         <hr class="my-8" />
-        <div class="mb-8">
-            <img src="../assets/images/cat.png" alt="cat" class="float-left" />
-            <p>
-                Full Stack Web Developer with a minor background in psychology
-                and engineering to build a better user experience on the web.
-                Recently earned a certificate in Full Stack Development from the
+        <div class="mb-8 flex md:flex-row flex-col">
+            <!-- //! Add profile pic -->
+            <img
+                src="../assets/images/cat.png"
+                alt="cat"
+                class="mx-auto md:mx-0 h-64 w-56"
+            />
+            <p class="mt-auto">
+                I am a Full Stack Web Developer with a minor background in
+                psychology and engineering to build a better user experience on
+                the web. I have a certificate in Full Stack Development from the
                 University of Kansas, with newly learned skills in Javascript,
-                React.js, Vuejs, MongoDB, and more. I have been known as a
-                strong leader who will take charge by my peers and guide
-                everyone to our goals. I am also a quick learner that can remain
-                calm when under pressure and come up with solutions when things
-                get tough. My aim is to create an impactful and memorable
-                user-experience for my audience. I worked on a project where I
-                applied the Phaser.js engine to a React.js app in a group of
-                five to make an escape room like game where users could log in
-                through authentication via Passport and MongoDB and play through
-                a sequence of puzzles to escape a room. I am excited to use my
-                skills on future projects as part of a driven team to create
-                memorable experiences for users on the web.
+                React.js, MongoDB, MySQL, and more. The projects I have worked
+                on vary from simple frontend html/javascript games to more
+                complex projects that include building a backend RESTful API and
+                external API calls, database setup, authentication, and frontend
+                design using frameworks, such as React and Vue. I have been
+                known as a strong leader who will take charge by my peers and
+                guide everyone to success. I am also a quick learner that can
+                remain calm when under pressure and come up with solutions when
+                things get tough. My aim is to create an impactful and memorable
+                user-experience for my audience. I am excited to use my skills
+                on future projects as part of a driven team to create memorable
+                experiences for users on the web.
             </p>
         </div>
-        <h1 class="text-4xl font-bold text-left">Skills/Technologies:</h1>
+        <h1 class="text-4xl font-bold text-left">Skills:</h1>
         <hr class="my-8" />
         <div class="flex w-full skills-list flex-col md:flex-row">
             <div class="flex-1 mx-2">
@@ -32,6 +37,11 @@
                     <p>- HTML</p>
                     <p>- CSS</p>
                     <p>- Javascript</p>
+                    <p>- JQuery</p>
+                    <p>- Handlebars</p>
+                    <p>- Tailwind</p>
+                    <p>- Bootstrap</p>
+                    <p>- SCSS</p>
                     <p>- Vuejs</p>
                     <p>- Reactjs</p>
                 </div>
@@ -44,6 +54,7 @@
                     <p>- Nodejs</p>
                     <p>- Express</p>
                     <p>- Firebase</p>
+                    <p>- GIT</p>
                 </div>
             </div>
         </div>
