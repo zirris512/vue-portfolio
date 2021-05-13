@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col h-screen">
+    <div class="flex flex-col min-h-screen bg-green-600">
         <the-nav />
         <router-view></router-view>
         <the-footer />

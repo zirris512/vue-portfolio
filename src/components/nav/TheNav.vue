@@ -1,16 +1,20 @@
 <template>
     <nav class="h-16 fixed w-full top-0 left-0 bg-black px-4">
         <div class="flex items-center h-full w-full text-2xl select-none">
-            <router-link to="/about">Brent Edwards</router-link>
+            <router-link to="/about" class="md:hover:text-green-300"
+                >Brent Edwards</router-link
+            >
             <!-- Desktop Navbar -->
             <div v-if="!isSmallScreen" class="ml-auto flex gap-10">
-                <router-link to="/about">About</router-link>
+                <router-link to="/about" class="hover:text-green-300"
+                    >About</router-link
+                >
                 <div
                     class="relative cursor-pointer"
                     ref="dropdown"
                     @click="toggleDropdown"
                 >
-                    <a>
+                    <a class="hover:text-green-300" tabindex="0">
                         Portfolio<font-awesome-icon
                             v-if="!showTitles"
                             icon="angle-down"
@@ -20,12 +24,15 @@
                         class="flex flex-col absolute -left-3 w-max px-3 bg-black"
                         v-if="showTitles"
                     >
-                        <router-link to="/portfolio" class="my-2">
+                        <router-link
+                            to="/portfolio"
+                            class="my-2 hover:text-green-300"
+                        >
                             See All
                         </router-link>
                         <router-link
                             :to="`/portfolio/${project.id}`"
-                            class="my-2"
+                            class="my-2 hover:text-green-300"
                             v-for="project in data"
                             :key="project.title"
                         >
@@ -33,7 +40,9 @@
                         </router-link>
                     </div>
                 </div>
-                <router-link to="/contact">Contact</router-link>
+                <router-link to="/contact" class="hover:text-green-300"
+                    >Contact</router-link
+                >
             </div>
             <!-- Mobile Navbar -->
             <div v-else class="ml-auto" ref="mobileNav">

@@ -1,12 +1,12 @@
 <template>
-    <div class="md:mx-24 mx-4 my-20 flex-1">
+    <div class="md:mx-24 mx-4 my-20 p-5 rounded-xl flex-1 bg-white shadow-md">
         <h1 class="text-4xl font-bold">Projects</h1>
         <hr class="my-8" />
         <section
             class="flex flex-col md:flex-row md:flex-wrap justify-center items-center"
         >
             <div
-                class="w-80 mx-5 h-80 bg-gray-300 rounded-lg my-5 flex flex-col"
+                class="w-80 mx-5 h-80 bg-gray-300 rounded-lg my-5 flex flex-col shadow-lg"
                 v-for="project in data"
                 :key="project.id"
             >
@@ -25,7 +25,7 @@
                         <a
                             :href="project.github"
                             target="_blank"
-                            class="text-2xl px-3 mx-1"
+                            class="text-2xl px-3 mx-1 hover:bg-gray-400 rounded-lg"
                         >
                             <font-awesome-icon
                                 :icon="['fab', 'github']"
@@ -34,7 +34,7 @@
                         <a
                             :href="project.deploy"
                             target="_blank"
-                            class="text-2xl px-3 mx-1"
+                            class="text-2xl px-3 mx-1 hover:bg-gray-400 rounded-lg"
                         >
                             <font-awesome-icon
                                 icon="external-link-alt"
@@ -42,7 +42,7 @@
                         </a>
                         <router-link
                             :to="`/portfolio/${project.id}`"
-                            class="text-2xl px-3 mx-1"
+                            class="text-2xl px-3 mx-1 hover:bg-gray-400 rounded-lg"
                         >
                             <font-awesome-icon
                                 icon="ellipsis-v"
