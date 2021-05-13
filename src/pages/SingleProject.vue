@@ -29,6 +29,7 @@
                     <h3 class="text-xl my-4 font-semibold">Links:</h3>
                     <a
                         :href="values.github"
+                        target="_blank"
                         class="inline-block m-2 p-2 w-32 text-md border-2 border-black hover:bg-gray-300 rounded"
                     >
                         <font-awesome-icon
@@ -38,6 +39,7 @@
                     </a>
                     <a
                         :href="values.deploy"
+                        target="_blank"
                         class="inline-block m-2 p-2 w-32 text-md border-2 border-red-600 hover:bg-red-300 rounded"
                     >
                         <font-awesome-icon

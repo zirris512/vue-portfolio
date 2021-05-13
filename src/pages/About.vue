@@ -10,13 +10,14 @@
                 class="mx-auto md:mx-0 h-64 w-56"
             />
             <p class="mt-auto">
-                I am a Full Stack Web Developer with a minor background in
-                psychology and engineering to build a better user experience on
-                the web. I have a certificate in Full Stack Development from the
-                University of Kansas, with newly learned skills in Javascript,
-                React.js, MongoDB, MySQL, and more. The projects I have worked
-                on vary from simple frontend html/javascript games to more
-                complex projects that include building a backend RESTful API and
+                I am a Full Stack Web Developer with almost 2 years personal
+                experience and a minor background in psychology and engineering
+                to build a better user experience on the web. I have a
+                certificate in Full Stack Development from the University of
+                Kansas, with newly learned skills in Javascript, React.js,
+                MongoDB, MySQL, and more. The projects I have worked on vary
+                from simple frontend html/javascript games to more complex
+                projects that include building a backend RESTful API and
                 external API calls, database setup, authentication, and frontend
                 design using frameworks, such as React and Vue. I have been
                 known as a strong leader who will take charge by my peers and
